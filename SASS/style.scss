@@ -1,0 +1,81 @@
+// Reset
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+//Variables
+$bg-color-primary: #809ee7;
+$color-primary: white;
+//Include
+
+//Navigation
+.grid-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  height: 7vh;
+  background-color: $bg-color-primary;
+  color: $color-primary;
+}
+.nav-item {
+  text-align: center;
+  align-self: center;
+}
+.plus {
+  font-weight: lighter;
+}
+.city {
+  text-transform: uppercase;
+  text-align: right;
+}
+.country {
+  text-transform: uppercase;
+  text-align: left;
+}
+.hamburger-menu {
+  text-align: center;
+}
+//Main
+.weather-now {
+  text-align: center;
+}
+.grid-weather-now {
+  text-align: center;
+}
+.weather-now-item {
+  text-align: center;
+}
+.temperature {
+  text-align: center;
+}
+.clouds {
+  text-align: center;
+}
+.wind {
+  text-align: center;
+}
+.humidity {
+  text-align: center;
+}
+.weather-forecast {
+  text-align: center;
+}
+.grid-weather-forecast {
+  text-align: center;
+}
+.weather-forecast-item {
+  text-align: center;
+}
+.day {
+  text-align: center;
+}
+.forecast-clouds {
+  text-align: center;
+}
+.min {
+  text-align: center;
+}
+.max {
+  text-align: center;
+}
