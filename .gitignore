@@ -1,7 +1,9 @@
 node_modules
 dist
 .cashe
-package-lock.json
+package-lock
+.json
+
 .env
 .doc
 .docx
