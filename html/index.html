@@ -12,7 +12,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- <link rel="stylesheet" href="../css/preview.css" /> -->
+    <!-- <link rel="stylesheet" href="../css/header.css" /> -->
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/preview.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <script defer src="../JS/script.js"></script>
   </head>
   <body>
     <header>
@@ -24,37 +30,63 @@
       </nav>
     </header>
     <main>
-      <section class="weather-now">
-        <div class="grid-weather-now">
-          <div class="weather-now-item temperature">
-            <p>8<sup>o</sup></p>
+      <section id="moving-bg">
+        <section class="preview">
+          <h1>Jasudas Web Engineering</h1>
+          <div class="progress-bar">
+            <div class="loading"></div>
           </div>
-          <div class="weather-now-item clouds">
-            <p>Partly Cloudy</p>
-          </div>
-          <div class="weather-now-item wind">
-            <p>13 mph</p>
-          </div>
-          <div class="weather-now-item humidity">
-            <p>0%</p>
-          </div>
-        </div>
+          <h2>Copyright 2021 &copy;</h2>
+        </section>
+        <section class="bg"></section>
       </section>
-      <section class="weather-forecast">
-        <div class="grid-weather-forecast">
-          <div class="weather-forecast-item">
-            <div class="day"></div>
-            <div class="forecast-clouds"></div>
-            <div class="temperature">
-              <div class="min"></div>
-              <div class="max"></div>
+      <section id="inline-cam">
+        <!-- <iframe
+          width="720"
+          height="410"
+          style="border: 0"
+          webkitallowfullscreen="true"
+          scrolling="no"
+          mozallowfullscreen="true"
+          allowfullscreen="true"
+          allow="autoplay; fullscreen; picture-in-picture; xr-spatial-tracking; encrypted-media"
+          autoplay="1"
+          src="https://balticlivecam.com/lt/cameras/lithuania/klaipeda/melnrages-molas/?embed"
+        ></iframe> -->
+      </section>
+      <section id="main" class="">
+        <section class="weather-now">
+          <div class="grid-weather-now">
+            <div class="weather-now-item temperature">
+              <p>8<sup>o</sup></p>
+            </div>
+            <div class="weather-now-item clouds">
+              <p>Partly Cloudy</p>
+            </div>
+            <div class="weather-now-item wind">
+              <p>13 mph</p>
+            </div>
+            <div class="weather-now-item humidity">
+              <p>0%</p>
             </div>
           </div>
-          <div class="weather-forecast-item"></div>
-          <div class="weather-forecast-item"></div>
-          <div class="weather-forecast-item"></div>
-          <div class="weather-forecast-item"></div>
-        </div>
+        </section>
+        <section class="weather-forecast">
+          <div class="grid-weather-forecast">
+            <div class="weather-forecast-item">
+              <div class="day"></div>
+              <div class="forecast-clouds"></div>
+              <div class="temperature">
+                <div class="min"></div>
+                <div class="max"></div>
+              </div>
+            </div>
+            <div class="weather-forecast-item"></div>
+            <div class="weather-forecast-item"></div>
+            <div class="weather-forecast-item"></div>
+            <div class="weather-forecast-item"></div>
+          </div>
+        </section>
       </section>
     </main>
     <footer></footer>

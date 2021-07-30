@@ -1,0 +1,32 @@
+.grid-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  height: 7vh;
+  background-color: #809ee7;
+  color: white;
+}
+
+.nav-item {
+  text-align: center;
+  align-self: center;
+}
+
+.plus {
+  font-weight: lighter;
+}
+
+.city {
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.country {
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.hamburger-menu {
+  text-align: center;
+}
+/*# sourceMappingURL=header.css.map */
