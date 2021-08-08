@@ -1,8 +1,11 @@
+//Import colors
+@import "./variables.scss";
 //Inside Main
+//! Upper block: current weather
 .weather-now {
   text-align: center;
 }
-.grid-weather-now {
+.weather-now > .grid-weather-now {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: calc(10vh - 50px);
@@ -12,33 +15,43 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   gap: 10px;
 }
-.weather-now-item {
+.weather-now > .grid-weather-now > .weather-now-item {
   //   text-align: center;
 }
-.temperature {
+.weather-now > .grid-weather-now > .weather-now-item.temperature {
   grid-row: span 3;
   text-align: right;
   font-size: 3rem;
 }
+/*.weather-now > .grid-weather-now > .weather-now-item */
 .clouds,
 .wind,
 .humidity {
   text-align: left;
 }
-.clouds {
+.weather-now > .grid-weather-now > .weather-now-item.clouds {
   //   text-align: center;
 }
-.wind {
+.weather-now > .grid-weather-now > .weather-now-item.wind {
   //   text-align: center;
 }
-.humidity {
+.weather-now > .grid-weather-now > .weather-now-item.humidity {
   //   text-align: center;
 }
+
+//! Lower block: weather forecast
 .weather-forecast {
-  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  // text-align: center;
 }
-.grid-weather-forecast {
-  text-align: center;
+.weather-forecast > .grid-weather-forecast {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  background: #ffffff63;
+  backdrop-filter: blur(10px);
 }
 .weather-forecast-item {
   text-align: center;
@@ -55,6 +68,11 @@
 .max {
   text-align: center;
 }
-.none {
-  display: none;
+//@at-root
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }

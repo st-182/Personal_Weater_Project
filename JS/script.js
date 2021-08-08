@@ -1,10 +1,18 @@
-const mainInside = document.querySelector(`main`);
-console.log(mainInside.innerHTML);
-const wasMainInside = mainInside.innerHTML;
+//!Variables
+//?-DOM
+const mainElement = document.querySelector(`main`);
+const menuElement = document.querySelector(`.grid-menu`);
+const moreFavoriteCitiesElement = document.querySelector(`.nav-item.plus`);
+const moreSettingsElement = document.querySelector(`.nav-item.hamburger-menu`);
+const favoriteCitiesElement = document.querySelector(`#favorites-search`);
+const settingsElement = document.querySelector(`#settings`);
+//?-Logic
+// const wasInsideMainElement = mainElement.innerHTML;
 
+//! Functions
 //no preview
-let preview = document.querySelector(`#moving-bg`);
-preview.style.display = `none`;
+// let preview = document.querySelector(`#moving-bg`);
+// preview.style.display = `none`;
 setTimeout(() => {
   let preview = document.querySelector(`#moving-bg`);
   let main = document.querySelector(`#main`);
@@ -14,35 +22,21 @@ setTimeout(() => {
   }, 500);
 }, 1500);
 
-let user = {
-  id: `453lk4n534lk5`,
-  name: `Petras`,
-  surname: `Slekys`,
-  email: `example@gmail.com`,
-  posts: [
-    {
-      title: `As ♡ CAO`,
-      text: `           `,
-      rating: [
-        {
-          id: `0495jj4l5kj`,
-          points: 5,
-        },
-        {
-          id: `9k5kng3p45fr`,
-          points: 5,
-        },
-      ],
-      comments: [
-        {
-          id: `654k64lkn56`,
-          text: `lol, as irgi`,
-        },
-        {
-          id: `09hg0fdg0hs`,
-          text: `CSS ismokome`,
-        },
-      ],
-    },
-  ],
+let showElement = (element, hideElement) => {
+  element.classList.toggle(`none`);
+  hideElement.classList.add(`none`);
 };
+
+let changeHeight = () => {
+  let menuHeight = menuElement.offsetHeight;
+  console.log(menuHeight);
+  mainElement.style.height = `calc(100vh - ${menuHeight}px)`;
+};
+//! Events
+moreFavoriteCitiesElement.addEventListener(`click`, () => {
+  showElement(favoriteCitiesElement, settingsElement);
+});
+moreSettingsElement.addEventListener(`click`, () => {
+  showElement(settingsElement, favoriteCitiesElement);
+});
+// document.addEventListener(`DOMContentLoaded`, changeHeight);

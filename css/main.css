@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.grid-weather-now {
+.weather-now > .grid-weather-now {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: calc(10vh - 50px);
@@ -12,12 +12,13 @@
   gap: 10px;
 }
 
-.temperature {
+.weather-now > .grid-weather-now > .weather-now-item.temperature {
   grid-row: span 3;
   text-align: right;
   font-size: 3rem;
 }
 
+/*.weather-now > .grid-weather-now > .weather-now-item */
 .clouds,
 .wind,
 .humidity {
@@ -25,11 +26,17 @@
 }
 
 .weather-forecast {
-  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
-.grid-weather-forecast {
-  text-align: center;
+.weather-forecast > .grid-weather-forecast {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  background: #ffffff63;
+  backdrop-filter: blur(10px);
 }
 
 .weather-forecast-item {
@@ -52,7 +59,11 @@
   text-align: center;
 }
 
-.none {
-  display: none;
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 /*# sourceMappingURL=main.css.map */
