@@ -7,4 +7,5 @@ package-lock
 .env
 .doc
 .docx
+.svg
 Project1.docx
