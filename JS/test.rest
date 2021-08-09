@@ -1,0 +1,5 @@
+GET https://api.meteo.lt/v1/places/klaipeda/forecasts/long-term
+
+###
+GET https://api.gismeteo.net/v2/weather/current/4368/?lang=en
+X-Gismeteo-Token: 56b30cb255.3443075
