@@ -2,7 +2,7 @@ node_modules
 dist
 .cashe
 package-lock
-.json
+*.json
 
 .env
 .doc
@@ -10,4 +10,4 @@ package-lock
 .svg
 frontend/assets/new
 Project1.docx
-backend/package-lock - Copy.json
+backend/package-lock.json
