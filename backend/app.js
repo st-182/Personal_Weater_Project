@@ -1,33 +1,14 @@
-const express = require("express");
-const cors = require("cors");
-const fetch = require("node-fetch");
-const dotenv = require("dotenv");
+import express from "express";
+import cors from "cors";
+import fetch from "node-fetch";
+import dotenv from "dotenv";
+import { getWeatherDataFrom_METEO_LT } from "./controllers/weatherController.js";
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 dotenv.config();
 
-app.get("/", async (req, res) => {
-  const response = await fetch(
-    `https://api.meteo.lt/v1/places/klaipeda/forecasts/long-term`
-  );
-  const data = await response.json();
-  res.send(data);
-});
+app.get("/weather/:city", getWeatherDataFrom_METEO_LT);
 
-//PositionStack API, will return a city out of coordinates
-app.post("/coordinates", async (req, res) => {
-  try {
-    const request = req.body;
-    const url = `${process.env.POSITION_STACK}?access_key=${process.env.POSITION_STACK_KEY}&query=${request.latitude},${request.longitude}`;
-    console.log(url);
-    const response = await fetch(url);
-    const data = await response.json();
-    res.send(data);
-  } catch (err) {
-    console.log(err);
-  }
-});
-
-app.listen(8080, () => console.log("server running"));
+app.listen(5000, () => console.log("server running"));
